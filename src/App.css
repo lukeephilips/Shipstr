@@ -29,13 +29,28 @@
 .App-title {
   font-size: 1.5em;
   float: left;
+  color: white;
 }
 .App-login {
   float: right;
 }
 
-.App-intro {
-  font-size: large;
+.App-body {
+  height: -webkit-fill-available;
+  background-color: #f1f3f4;
+  padding: 20px 200px 0px 200px;
+}
+.panel {
+  height: 300px;
+}
+.tile-img {
+  width: 100px;
+  display: block;
+  align-content: flex-end;
+  margin-bottom: 20px;
+}
+.tile-label {
+  font-size: 1.5em;
 }
 
 @keyframes App-logo-spin {

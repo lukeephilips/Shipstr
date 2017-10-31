@@ -1,39 +1,33 @@
 import React, { Component } from 'react';
+import {Switch, Route} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Ocean from './components/Ocean';
+import Air from './components/Air';
+import Customs from './components/Customs';
+
+
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <span className="App-title">SHIPSTR</span>
-          <span className="App-login">Log in</span>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <footer className="App-footer row">
-          <div className="col-sm-4">
-            <ul className="site-links">
-              <li>Home</li>
-              <li>Manage Account</li>
-              <li>Help</li>
-            </ul>
-          </div>
-          <div className="col-sm-4">
-            <ul className="site-links">
-              <li>Terms and Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Collection Statement</li>
-            </ul>
-          </div>
-          <div className="col-sm-4">
-            Social stuff
-          </div>
-
-
-        </footer>
+        <Header />
+        <div className="App-body">
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/ocean" component={Ocean}/>
+            <Route path="/air" component={Air}/>
+            <Route path="/customs" component={Customs}/>
+          </Switch>
+        </div>
+        <Footer />
       </div>
     );
   }

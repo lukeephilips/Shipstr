@@ -1,18 +1,18 @@
 import * as types from "./../constants/ActionTypes";
 import providersApi from '../api/mockProvidersApi';
 
-export const getProviders = (category) => ({
+export const loadProvidersSuccess = (providers) => ({
   type: types.GET_PROVIDERS,
-  category
+  providers
 });
 
 // Thunks
 
-export function loadProviders() {
+export function getProviders() {
   return function(dispatch) {
     // dispatch(beginCall());
     return providersApi.getAllProviders().then(providers => {
-      // dispatch(loadProvidersSuccess(prooviders));
+      dispatch(loadProvidersSuccess(providers));
     }).catch(error => {
       throw(error);
     });

@@ -10,8 +10,8 @@ const providerReducer = (state = defaultState, action) => {
     default:
     // console.log("default",  defaultState);
 
-    console.log("reducer  ", state);
-      return state;
+    // console.log("reducer  ", state);
+      return state.providers;
   }
 };
 

@@ -1,19 +1,32 @@
 import React from 'react';
 import { connect } from "react-redux";
 
+function Air(props) {
+  let providersList;
+    if(props.providers.length > 0) {
+      providersList = props.providers.map(function (provider){
+      return (
+        <div>
+          <ul>
+            <li>{provider.companyName}
+            </li>
+          </ul>
+        </div>
+      )
+  });
+}
 
-function Air(dispatch, providers) {
   return (
     <div>
       <h1>Air things</h1>
+      {providersList}
     </div>
   )
 }
 const mapStateToProps = state => {
-  console.log("mapStateToProps  ", state);
   return {
-    providers: state.providers
-    category: state.category,
+    providers: state.providerReducer,
+    category: state.category
 
   }
 };

@@ -1315,4 +1315,4 @@ class ProvidersApi {
   }
 }
 
-export default ProvidersApi;
+export default feed;

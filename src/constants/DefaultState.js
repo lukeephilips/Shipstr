@@ -1,4 +1,6 @@
+import feed from "./../api/mockProvidersApi";
+
 export const defaultState ={
-  providers: [],
+  providers: feed.providers,
   category: ""
 };

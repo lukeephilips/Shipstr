@@ -6,12 +6,13 @@ const providerReducer = (state = defaultState, action) => {
   switch (action.type) {
     case types.GET_PROVIDERS:
       console.log(action);
-      return state;
+      return newState;
     default:
-    // console.log("default",  defaultState);
-
-    // console.log("reducer  ", state);
-      return state.providers;
+      let newState = state.providers.filter((provider) => {
+        return provider.type === "air"
+      });
+      console.log(newState);
+      return newState;
   }
 };
 

@@ -8,8 +8,9 @@ function Air(props) {
       return (
         <div>
           <ul>
-            <li>{provider.companyName}
-            </li>
+            <li>{provider.companyName}</li>
+            <li>{provider.type}</li>
+
           </ul>
         </div>
       )
@@ -25,7 +26,7 @@ function Air(props) {
 }
 const mapStateToProps = state => {
   return {
-    providers: state.providerReducer,
+    providers: state.providerReducer.providers,
     category: state.category
 
   }

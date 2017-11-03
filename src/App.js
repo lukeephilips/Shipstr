@@ -10,10 +10,6 @@ import Ocean from './components/Ocean';
 import Air from './components/Air';
 import Customs from './components/Customs';
 
-
-
-
-
 class App extends Component {
   render() {
     return (

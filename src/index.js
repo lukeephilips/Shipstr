@@ -1,15 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import ReactDOM from 'react-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+
+
+import App from './App';
+import reducer from "./reducers"
+
+const store = createStore(reducer);
+
 ReactDOM.render(
-  <HashRouter>
-    <App />
-  </HashRouter>
-  , document.getElementById('root'));
+  <Provider store={store}>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </Provider>, document.getElementById('root'));
 registerServiceWorker();

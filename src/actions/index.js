@@ -22,8 +22,9 @@ export const loadProvidersSuccess = (category) => ({
 
 export const getProviders = (category) => {
   return (dispatch) => {
-    dispatch(loadProvidersSuccess(category));
-    console.log(providersApi.getAllProviders());
-    return providersApi.getAllProviders()
+    // dispatch(loadProvidersSuccess(category));
+    let providers = providersApi.providers;
+    console.log(providers);
+    return providers;
   }
 }

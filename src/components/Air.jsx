@@ -8,9 +8,15 @@ function Air(props) {
       return (
         <div>
           <ul>
-            <li>{provider.companyName}</li>
-            <li>{provider.type}</li>
-
+            <div className = "panel panel-default">
+              <div className= "panel-body">
+                <div className = "panel-header">
+                  <h3>{provider.companyName}</h3>
+                </div>
+                <img className="company-logo" src={provider["images"]["Company Logo"]["url"]} />
+                <p>{provider.type}</p>
+              </div>
+            </div>
           </ul>
         </div>
       )
@@ -26,8 +32,7 @@ function Air(props) {
 }
 const mapStateToProps = state => {
   return {
-    providers: state.providerReducer.providers,
-    category: state.category
+    providers: state.providerReducer.providers
 
   }
 };

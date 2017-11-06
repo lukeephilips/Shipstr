@@ -43,6 +43,9 @@
 .panel {
   height: 300px;
 }
+.company-logo{
+  width: 200px;
+}
 .tile-img {
   width: 100px;
   display: block;

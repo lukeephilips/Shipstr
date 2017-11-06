@@ -1305,14 +1305,14 @@ const feed =
   ]
 }
 
-class ProvidersApi {
-  static getAllProviders() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(Object.assign([], feed.providers));
-      });
-    });
-  }
-}
+// class ProvidersApi {
+//   static getAllProviders() {
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve(Object.assign([], feed.providers));
+//       });
+//     });
+//   }
+// }
 
 export default feed;
